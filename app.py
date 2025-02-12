@@ -1,1 +1,2 @@
 print('SRM')
+print('TRG')
