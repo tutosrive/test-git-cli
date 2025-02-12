@@ -3,7 +3,7 @@ import math
 
 print('SRM')
 print('TRG')
-print(Math.PI)
+print(math.pi)
 print("Me estoy enredando")
 trg = Person('Tutos', 19, 60, 179)
 print(trg)
