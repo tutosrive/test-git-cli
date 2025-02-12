@@ -1,14 +1,14 @@
 class Person:
     def __init__(self, name:str, age:float | int, weight:float | int, height:int):
         # Properties
-        self.name:str = name
+        self.name:str = name # Nombre completo
         self.age:float = age # 0.0 hasta 0.12 Son meses, > son años
-        self.weight:float = weight
-        self.height:int = height
+        self.weight:float = weight # Peso en Kg
+        self.height:int = height # Altura en Centímetros
         # Actions
-        self.walking:bool = False
-        self.speaking:bool = False
-        self.running:bool = False
+        self.walking:bool = False # ¿Está caminando?
+        self.speaking:bool = False # ¿Está hablando?
+        self.running:bool = False # ¿Está corriendo?
     
     def __str__(self) -> str:
         return f'Nombre: {self.name}\nEdad: {self.__format_age()}\nPeso: {self.weight} Kg\nAltura: {self.height} CM\n'
@@ -41,7 +41,9 @@ class Person:
         if self.age < 1 and len(str(self.age).split('.')[1]) == 2 and self.age > 0.12 or self.age > 1 and type(self.age % self.age) == 'float':
             return 'Edad errónea'
         if self.age >= 1:
+              # Formatear edad a años
               return f'{int(self.age % 100)} {'año' if self.age == 1 else 'años'}'
         else:
+            # Formatear edad a meses
             age = int((self.age * 10) % 10) if len(str(self.age).split('.')[1]) == 1 else int((self.age * 100) % 100)
             return f'{age} {'mes' if age < 2 else 'meses'}'
