@@ -8,7 +8,7 @@ class Company:
         self.employees:list = [] # Lista de empleados (Contiene objetos de tipo Employee)
     
     def __str__(self):
-        return f'Nombre Empresa: {self.name}\nForma Jurídica: {self.legal_form}\nTamaño: {self.size_type}\nSector Económico: {self.economic_sector}\nPropiedad: {self.property_type}\n'
+        return f'Nombre Empresa: {self.name}\nForma Jurídica: {self.legal_form}\nTamaño: {self.size_type}\nSector Económico: {self.economic_sector}\nPropiedad: {self.property_type}\nEmpleados: \n{self.get_all_employees_names()}'
 
     def add_employees(self, *employyes) -> dict:
         """Añadir empleados a la lista de empleados de la empresa
@@ -26,6 +26,18 @@ class Company:
             # Agregar cada empleado a la lista
             self.employees.append(employee)
         return {'ok': True}
+
+    def get_all_employees_names(self) -> str:
+        """Obtener la lista completa de nombres de los empleados
+
+        Returns:
+            str: Lista de nobres
+        """
+        names:str = ''
+        for i, employee in enumerate(self.employees):
+            names += f'----\nEmpleado {i + 1}: {employee.name}\n'
+        names += '----\n'
+        return names
 
     def get_all_employees_str(self) -> str:
         """Obtener la lista completa de empleados 
