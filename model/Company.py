@@ -1,3 +1,4 @@
+from . import Employee
 class Company:
     def __init__(self, name:str, legal_form:str, size_type:str, economic_sector:str, property_type:str, employees:list = None) -> None:
         self.name:str = name # Nombre de la empresa
@@ -50,3 +51,6 @@ class Company:
             employees_str += f'----\n{employee.__str__()}\n'
         employees_str += '----\n'
         return employees_str
+
+    def get_employee(self, name: str) -> dict:
+        pass
