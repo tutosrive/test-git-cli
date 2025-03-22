@@ -53,4 +53,4 @@ class Company:
         return employees_str
 
     def get_employee(self, name: str) -> dict:
-        pass
+        print("Update something!")
