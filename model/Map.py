@@ -8,3 +8,6 @@ class Map:
     
 	def getSite(self) -> str:
 	  return self.__site
+
+  def setSize(self, size) -> None:
+    self.__size = size
