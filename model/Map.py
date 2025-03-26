@@ -1,5 +1,6 @@
 class Map:
-  def __init__(self):
+  def __init__(self) -> None:
+    self.__time:str = ''
     self.__site:str = 'Colombia'
     self.__size:int = 5
 
