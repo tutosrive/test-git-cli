@@ -4,10 +4,10 @@ class Map:
     self.__site:str = 'Colombia'
     self.__size:int = 5
 
-  def getSixe(self) -> str:
+  def getSize(self) -> str:
     return self.__size
     
-	def getSite(self) -> str:
+	def getSite1(self) -> str:
 	  return self.__site
 
   def setSize(self, size) -> None:
