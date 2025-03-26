@@ -6,9 +6,9 @@ class Map:
 
   def getSize(self) -> str:
     return self.__size
-    
-	def getSite1(self) -> str:
-	  return self.__site
+  
+  def getSite1(self) -> str:
+     return self.__site
 
   def setSize(self, size) -> None:
     self.__size = size
