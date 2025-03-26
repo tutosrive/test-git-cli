@@ -5,7 +5,6 @@ class Person:
         self.age:float = age # 0.0 hasta 0.12 Son meses, > son años
         self.weight:float = weight # Peso en Kg
         self.height:int = height # Altura en Centímetros
-        self.nickname:str = ''
         # Actions
         self.walking:bool = False # ¿Está caminando?
         self.speaking:bool = False # ¿Está hablando?
